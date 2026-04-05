@@ -5,7 +5,7 @@
   "author": {
     "name": "onevarez"
   },
-  "repository": "https://github.com/onevarez/claude-viewfinder-plugin",
+  "repository": "https://github.com/onevarez/claude-plugins",
   "mcpServers": {
     "playwright": {
       "command": "npx",

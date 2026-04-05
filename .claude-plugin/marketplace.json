@@ -1,10 +1,10 @@
 {
-  "name": "viewfinder",
+  "name": "onevarez",
   "owner": {
     "name": "onevarez"
   },
   "metadata": {
-    "description": "Cinematic browser session recording for Claude Code",
+    "description": "Claude Code plugins by onevarez",
     "version": "0.1.0"
   },
   "plugins": [
