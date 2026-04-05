@@ -1,0 +1,15 @@
+{
+  "name": "viewfinder",
+  "version": "0.1.0",
+  "description": "Cinematic browser session recording for Claude Code. Record Playwright sessions as polished videos with auto-zoom.",
+  "author": {
+    "name": "onevarez"
+  },
+  "repository": "https://github.com/onevarez/claude-viewfinder-plugin",
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--config", "${CLAUDE_PLUGIN_ROOT}/config/playwright-config.json"]
+    }
+  }
+}

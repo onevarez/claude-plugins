@@ -1,0 +1,18 @@
+{
+  "browser": {
+    "isolated": true,
+    "contextOptions": {
+      "viewport": { "width": 1920, "height": 1080 },
+      "deviceScaleFactor": 1,
+      "recordVideo": {
+        "dir": "./playwright-videos/",
+        "size": { "width": 1920, "height": 1080 }
+      }
+    },
+    "initScript": ["${SO_TRACKER_PATH}"]
+  },
+  "capabilities": ["core", "vision", "devtools"],
+  "outputDir": "./playwright-output",
+  "outputMode": "file",
+  "consoleLevel": "info"
+}

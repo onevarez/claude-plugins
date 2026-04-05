@@ -1,0 +1,20 @@
+{
+  "name": "viewfinder",
+  "owner": {
+    "name": "onevarez"
+  },
+  "metadata": {
+    "description": "Cinematic browser session recording for Claude Code",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "viewfinder",
+      "source": "./plugins/viewfinder",
+      "description": "Record Playwright browser sessions as polished videos with auto-zoom, rounded corners, and cinematic composition",
+      "version": "0.1.0",
+      "keywords": ["recording", "video", "playwright", "cinematic", "browser", "viewfinder"],
+      "strict": false
+    }
+  ]
+}
