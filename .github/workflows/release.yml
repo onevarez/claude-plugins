@@ -1,0 +1,67 @@
+name: Release viewfinder-cli
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-15
+            target: aarch64-apple-darwin
+            platform: darwin-arm64
+          - os: macos-15-intel
+            target: x86_64-apple-darwin
+            platform: darwin-x64
+          - os: ubuntu-22.04
+            target: x86_64-unknown-linux-gnu
+            platform: linux-x64
+
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - name: Build
+        working-directory: cli
+        run: cargo build --release --target ${{ matrix.target }}
+
+      - name: Test
+        working-directory: cli
+        run: cargo test --release --target ${{ matrix.target }}
+
+      - name: Package
+        run: |
+          mkdir -p dist
+          cp cli/target/${{ matrix.target }}/release/viewfinder dist/
+          cd dist && tar -czf ../viewfinder-${{ matrix.platform }}.tar.gz *
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: viewfinder-${{ matrix.platform }}
+          path: viewfinder-${{ matrix.platform }}.tar.gz
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            viewfinder-darwin-arm64/viewfinder-darwin-arm64.tar.gz
+            viewfinder-darwin-x64/viewfinder-darwin-x64.tar.gz
+            viewfinder-linux-x64/viewfinder-linux-x64.tar.gz
+          fail_on_unmatched_files: false
+          generate_release_notes: true
