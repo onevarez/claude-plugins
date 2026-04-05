@@ -51,3 +51,9 @@ Two binaries power the plugin:
 - **[kineto](https://github.com/onevarez/kineto-engine)** — cinematic composition (background, corners, shadow, zoom) via statically linked libav*
 
 Both are downloaded automatically by `/vp:setup` from GitHub Releases.
+
+## License
+
+Plugin assets (skills, hooks, scripts): MIT
+
+Composition engine ([kineto](https://github.com/onevarez/kineto-engine)): GPL-2.0-or-later

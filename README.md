@@ -14,6 +14,4 @@ claude plugins marketplace add onevarez/claude-plugins
 
 ## License
 
-Plugin assets (skills, hooks, scripts): MIT
-
-Composition engine ([kineto](https://github.com/onevarez/kineto-engine)): GPL-2.0-or-later
+MIT
