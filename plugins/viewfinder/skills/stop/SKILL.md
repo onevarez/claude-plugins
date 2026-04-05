@@ -3,7 +3,7 @@
 ## Usage
 
 ```
-/vp:stop
+/viewfinder:stop
 ```
 
 ## Allowed tools

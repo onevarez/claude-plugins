@@ -5,9 +5,9 @@ Record a Playwright browser session and produce a polished, cinematic video with
 ## Usage
 
 ```
-/vp:record Navigate to stripe.com and explore the pricing page
-/vp:record Go to github.com/anthropics/claude-code, star the repo, browse issues
-/vp:record                  # (no args = start recording mode, use /vp:stop to end)
+/viewfinder:record Navigate to stripe.com and explore the pricing page
+/viewfinder:record Go to github.com/anthropics/claude-code, star the repo, browse issues
+/viewfinder:record                  # (no args = start recording mode, use /viewfinder:stop to end)
 ```
 
 ## Allowed tools
@@ -23,9 +23,9 @@ Record a Playwright browser session and produce a polished, cinematic video with
 viewfinder session init
 ```
 
-Note: `viewfinder` must be on PATH. If not found, tell user to run `/vp:setup`.
+Note: `viewfinder` must be on PATH. If not found, tell user to run `/viewfinder:setup`.
 
-If this prints "ERROR", tell the user to run `/vp:setup` and stop.
+If this prints "ERROR", tell the user to run `/viewfinder:setup` and stop.
 
 Otherwise it prints a SESSION_ID. Remember it.
 
@@ -33,7 +33,7 @@ Otherwise it prints a SESSION_ID. Remember it.
 
 **If args provided:** Use Playwright MCP tools to do the task. Navigate, click, fill — whatever is needed.
 
-**If no args:** Say "Recording. Use `/vp:stop` when done."
+**If no args:** Say "Recording. Use `/viewfinder:stop` when done."
 
 ### Step 3: Finalize
 

@@ -51,4 +51,4 @@ Tell the user exactly this:
 
 > **Setup complete.** Close your terminal, reopen it, then start Claude Code again. This is needed once so the `viewfinder` command and Playwright MCP are available.
 >
-> After restarting, use `/vp:record <instructions>` to record browser sessions.
+> After restarting, use `/viewfinder:record <instructions>` to record browser sessions.

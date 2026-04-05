@@ -9,22 +9,22 @@ claude plugins marketplace add onevarez/claude-plugins
 claude plugins install viewfinder@onevarez
 ```
 
-Restart Claude Code, then run `/vp:setup` to download binaries.
+Restart Claude Code, then run `/viewfinder:setup` to download binaries.
 
 ## Usage
 
 ```
-/vp:setup                    # one-time: downloads binaries, configures Playwright
-/vp:record <instructions>    # record a browser session
-/vp:stop                     # finalize and produce cinematic video
+/viewfinder:setup                    # one-time: downloads binaries, configures Playwright
+/viewfinder:record <instructions>    # record a browser session
+/viewfinder:stop                     # finalize and produce cinematic video
 ```
 
 ### Examples
 
 ```
-/vp:record Navigate to stripe.com and explore the pricing page
-/vp:record Go to github.com/anthropics/claude-code, click on issues, browse a few
-/vp:record Open docs.anthropic.com, search for "tool use", read the first result
+/viewfinder:record Navigate to stripe.com and explore the pricing page
+/viewfinder:record Go to github.com/anthropics/claude-code, click on issues, browse a few
+/viewfinder:record Open docs.anthropic.com, search for "tool use", read the first result
 ```
 
 ## How It Works
@@ -50,7 +50,7 @@ Two binaries power the plugin:
 - **viewfinder** — session management, hook event capture, manifest/zoom computation, orchestration
 - **[kineto](https://github.com/onevarez/kineto-engine)** — cinematic composition (background, corners, shadow, zoom) via statically linked libav*
 
-Both are downloaded automatically by `/vp:setup` from GitHub Releases.
+Both are downloaded automatically by `/viewfinder:setup` from GitHub Releases.
 
 ## License
 
