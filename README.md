@@ -4,7 +4,10 @@ Record Playwright browser sessions as cinematic videos with auto-zoom, rounded c
 
 ## Install
 
+Add the Viewfinder marketplace, then install:
+
 ```bash
+claude plugins marketplace add onevarez/claude-viewfinder-plugin
 claude plugins install viewfinder@viewfinder
 ```
 
